@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MBY-o5-IGo">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="1Vi-MH-Wwu">
+            <objects>
+                <navigationController id="MBY-o5-IGo" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2rV-Qg-YG1">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="BOG-lQ-UoG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FiP-mS-JfB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-887" y="134"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MeMeV1_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="usJ-9D-C6h">
+                                <rect key="frame" x="0.0" y="520" width="320" height="48"/>
+                                <items>
+                                    <barButtonItem tag="1" title="Album" id="YQC-fg-T6L">
+                                        <color key="tintColor" red="0.98850089311599731" green="0.012446930631995201" blue="0.42300909757614136" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="pickImage:" destination="BYZ-38-t0r" id="B9M-np-FKW"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="af0-8u-Q62"/>
+                                    <barButtonItem tag="2" systemItem="camera" id="sQO-oL-8l8">
+                                        <color key="tintColor" red="0.98850089311599731" green="0.012446930631995201" blue="0.42300909757614136" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="pickImage:" destination="BYZ-38-t0r" id="ksD-eS-Sh7"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DUd-yc-uXr">
+                                <rect key="frame" x="6.5" y="80" width="307" height="408"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nic-93-71w">
+                                <rect key="frame" x="141.5" y="124" width="37" height="20"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YHs-eJ-weX">
+                                <rect key="frame" x="123" y="424" width="74" height="20"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" keyboardAppearance="alert"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="usJ-9D-C6h" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="3rD-iD-7Fz"/>
+                            <constraint firstItem="DUd-yc-uXr" firstAttribute="top" secondItem="nic-93-71w" secondAttribute="bottom" constant="-64" id="63V-JI-rgc"/>
+                            <constraint firstItem="DUd-yc-uXr" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.96" id="Big-rH-NS2"/>
+                            <constraint firstItem="nic-93-71w" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Fgs-ju-5sH"/>
+                            <constraint firstAttribute="trailing" secondItem="usJ-9D-C6h" secondAttribute="trailing" id="Iu6-Iy-qKb"/>
+                            <constraint firstItem="DUd-yc-uXr" firstAttribute="centerX" secondItem="usJ-9D-C6h" secondAttribute="centerX" id="MwM-wF-FbD"/>
+                            <constraint firstItem="usJ-9D-C6h" firstAttribute="top" relation="lessThanOrEqual" secondItem="DUd-yc-uXr" secondAttribute="bottom" constant="32" id="VhP-Bc-TCz"/>
+                            <constraint firstItem="YHs-eJ-weX" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="WaD-Km-mQ3"/>
+                            <constraint firstItem="DUd-yc-uXr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="aT4-HJ-nzT"/>
+                            <constraint firstItem="DUd-yc-uXr" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="s7C-j3-Nzc"/>
+                            <constraint firstItem="usJ-9D-C6h" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="xfh-tz-2oW"/>
+                            <constraint firstItem="YHs-eJ-weX" firstAttribute="top" secondItem="DUd-yc-uXr" secondAttribute="bottom" constant="-64" id="zVL-cx-hes"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="YDV-gu-aNb">
+                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="p0n-fM-U2e">
+                            <color key="tintColor" red="0.98850089311599731" green="0.012446930631995201" blue="0.42300909757614136" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="shareMeme:" destination="BYZ-38-t0r" id="82u-Cz-HLZ"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="LyV-ad-Uxg">
+                            <color key="tintColor" red="0.98850089311599731" green="0.012446930631995201" blue="0.42300909757614136" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="clearMeme:" destination="BYZ-38-t0r" id="zph-DZ-sNY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="bottomTxt" destination="YHs-eJ-weX" id="Y4F-HU-MvV"/>
+                        <outlet property="camBtn" destination="sQO-oL-8l8" id="4VL-E9-huv"/>
+                        <outlet property="clearBtn" destination="LyV-ad-Uxg" id="ETW-PW-mh4"/>
+                        <outlet property="image" destination="DUd-yc-uXr" id="W7t-I7-XDU"/>
+                        <outlet property="shareBtn" destination="p0n-fM-U2e" id="RuO-Vn-Jsz"/>
+                        <outlet property="toolBar" destination="usJ-9D-C6h" id="RPe-e0-u5Z"/>
+                        <outlet property="topTxt" destination="nic-93-71w" id="HuB-af-VPO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135" y="133.09859154929578"/>
+        </scene>
+    </scenes>
+</document>
